@@ -24,8 +24,8 @@ public class ChromeDriverProvider implements WebDriverProvider {
 
     @Override
     public WebDriver createDriver(DesiredCapabilities capabilities) {
-        ChromeDriverManager.chromedriver().version("83.0.4103.39").setup();
-//        ChromeDriverManager.chromedriver().setup();
+//        ChromeDriverManager.chromedriver().version("83.0.4103.39").setup();
+        ChromeDriverManager.chromedriver().setup();
 
         HashMap<String, Object> chromePrefs = new HashMap<>();
         chromePrefs.put("profile.default_content_settings.popups", 0);
