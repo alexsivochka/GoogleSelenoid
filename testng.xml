@@ -1,0 +1,9 @@
+<suite name="Google test" parallel="tests" thread-count="1">
+
+    <test name="Google Test">
+        <classes>
+            <class name="at.tests.GoogleTest" />
+        </classes>
+    </test>
+
+</suite>
