@@ -37,6 +37,7 @@ public class ChromeDriverProvider implements WebDriverProvider {
         options.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.ACCEPT);
         options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
         options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+        options.addArguments("--disable-dev-shm-usage");
         options.addExtensions(listExtensions());
 
         ChromeDriver driver = new ChromeDriver(options);
