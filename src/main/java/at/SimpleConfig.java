@@ -12,5 +12,6 @@ import static org.aeonbits.owner.Config.*;
 public interface SimpleConfig extends Config {
 
     String browser();
+    String remoteBrowserVersion();
     String baseUrl();
 }
