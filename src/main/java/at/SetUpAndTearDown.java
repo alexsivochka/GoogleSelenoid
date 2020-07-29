@@ -31,17 +31,16 @@ public class SetUpAndTearDown {
     public void SetUpBrowser() {
         switch (browser){
             case "firefox" :
-//                System.setProperty("selenide.browser", "at.webDriverProviders.FirefoxDriverProvider");
                 Configuration.browser = FirefoxDriverProvider.class.getName();
                 break;
             case "chrome" :
-//                System.setProperty("selenide.browser", "at.webDriverProviders.ChromeDriverProvider");
                 Configuration.browser = ChromeDriverProvider.class.getName();
+                break;
+            case "remote" :
+                Configuration.browser = RemoteDriverBrowser.class.getName();
                 break;
             default:
-//                System.setProperty("selenide.browser", "at.webDriverProviders.ChromeDriverProvider");
-                Configuration.browser = ChromeDriverProvider.class.getName();
-                break;
+                throw new IllegalStateException("Нет определена конфигурация для browser" );
         }
         Configuration.timeout = 10000;
         Configuration.proxyEnabled = true;
