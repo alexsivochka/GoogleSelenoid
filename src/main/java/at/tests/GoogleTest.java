@@ -22,7 +22,7 @@ public class GoogleTest extends SetUpAndTearDown {
         sleep(8000);
         $("input[name='q']").shouldBe(visible, enabled).setValue("selenide").pressEnter();
         sleep(8000);
-        String firstLinkText = $("div.r a h3").shouldBe(visible).getText();
+        String firstLinkText = $("div.rc a h3").shouldBe(visible).getText();
         assertThat(firstLinkText).isEqualToIgnoringCase("Selenide: лаконичные и стабильные UI тесты на Java");
     }
 
